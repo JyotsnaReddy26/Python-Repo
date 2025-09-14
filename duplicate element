@@ -1,0 +1,13 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        freq={}
+        for i in range(0,len(nums)):
+            if nums[i] not in freq:
+                freq[nums[i]]=1
+            else:
+                freq[nums[i]]+=1
+        for i in freq:
+            if freq[i]>=2:
+                return True
+                freq[i]=1
+        return False
