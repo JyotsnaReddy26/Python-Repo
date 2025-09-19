@@ -1,0 +1,21 @@
+class Solution(object):
+    def intersect(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: List[int]
+        """
+        count = {}
+        for i in range(len(nums1)):
+            if nums1[i] not in count:
+                count[nums1[i]] = 1
+            else:
+                count[nums1[i]] += 1
+
+        l = []
+        for i in range(len(nums2)):
+            if nums2[i] in count and count[nums2[i]] > 0:
+                l.append(nums2[i])
+                count[nums2[i]] -= 1  
+
+        return l
