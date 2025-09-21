@@ -1,0 +1,12 @@
+# cook your dish here
+n=int(input())
+arr=list(map(int,input().split()))
+target=int(input())
+found=False
+for i in range(0,len(arr)):
+    if arr[i]==target:
+        print("Target found")
+        found=True
+        break
+if not found:
+    print("Not found")
