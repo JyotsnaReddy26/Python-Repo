@@ -1,0 +1,13 @@
+n=int(input())
+p1=0
+p2=1
+while p2<n:
+    target=p1+p2
+    p1=p2
+    p2=target 
+if abs(n-p1)>abs(n-p2):
+    print(p2)
+elif abs(n-p1)==abs(n-p2):
+    print(p1,p2)
+else:
+    print(p1)
