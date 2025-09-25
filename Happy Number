@@ -1,0 +1,20 @@
+import math
+def number(n):
+    k=0
+    while(n>0):
+        k+=math.pow((n%10),2)
+        n=n//10
+    return math.floor(k)  
+n=int(input())        
+d={}
+while(n!=1):
+    if n in d:
+        break
+    d[n]=1
+    n=number(n)
+    
+if n!=1:
+    print("Not Happy Number")
+else:
+    print("Happy Number")
+    
