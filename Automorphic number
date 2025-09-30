@@ -1,0 +1,14 @@
+n1=int(input())
+n2=n1*n1 
+while n1>0:
+   k1=n1%10
+   k2=n2%10
+   if k1==k2:
+       n1=n1//10
+       n2=n2//10
+   else:
+       break
+if n1==0:
+    print("Automorphic")
+else:
+    print("Not Automorphic")
