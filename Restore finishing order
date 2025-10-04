@@ -1,0 +1,9 @@
+class Solution:
+    def recoverOrder(self, order: List[int], friends: List[int]) -> List[int]:
+        arr = []
+
+        for o in order:
+            for f in friends:
+                if(o==f):
+                   arr.append(o)
+        return arr
