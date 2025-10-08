@@ -1,0 +1,17 @@
+class Solution:
+    def maximum69Number (self, num: int) -> int:
+        k=int(str(num)[::-1])
+        is_first=True
+        my_num=0
+        while (k>0):
+            m=k%10
+            k=k//10
+            if m==6:
+                if is_first:
+                    my_num=my_num*10+9
+                    is_first=False
+                else:
+                    my_num=my_num*10+6
+            else:
+                my_num=my_num*10+9 
+        return my_num
