@@ -1,0 +1,19 @@
+n=int(input())
+six_c=0
+nine_c=0
+while(n>0):
+    k=n%10
+    n=n//10
+
+    if k==6:
+        six_c+=1
+    else:
+        nine_c+=1
+num=0
+while(nine_c>0):
+    nine_c-=1
+    num=num*10+9
+while(six_c>0):
+    six_c-=1
+    num=num*10+6
+print(num)
