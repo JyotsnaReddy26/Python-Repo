@@ -1,0 +1,18 @@
+a=51214
+b=str(a)
+c=list(b)
+dicto={}
+for i in range(0,len(c)):
+    if c[i] in dicto:
+        dicto[c[i]]+=1
+    else:
+       dicto[c[i]]=1
+more_count=True
+for i in dicto:
+    if dicto[i]>1:
+        more_count=False
+if more_count==True:
+    print("unique number")
+else:
+    print("Not unique number")
+       
