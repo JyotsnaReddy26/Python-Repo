@@ -1,0 +1,7 @@
+n=int(input())
+num=n%10
+for i in range(n):
+    k=n%10
+    n=n//10
+    num=max(k,num)
+print(num)
