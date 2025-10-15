@@ -1,0 +1,16 @@
+class Solution:
+    def repeatedNTimes(self, nums: List[int]) -> int:
+        
+        dicto={}
+        for i in range(0,len(nums)):
+            if nums[i] not in dicto:
+                dicto[nums[i]]=1
+            else:
+                dicto[nums[i]]+=1
+        n=len(nums)//2
+        for i in dicto:
+            if dicto[i]==n:
+                return i
+
+
+        
